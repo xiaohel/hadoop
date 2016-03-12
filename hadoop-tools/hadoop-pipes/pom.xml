@@ -40,6 +40,11 @@
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
+      <properties>
+        <openssl.prefix>/usr/local/Cellar/openssl/1.0.2d_1</openssl.prefix>
+        <openssl.lib>/usr/local/Cellar/openssl/1.0.2d_1/lib</openssl.lib>
+        <openssl.include>/usr/local/Cellar/openssl/1.0.2d_1/include</openssl.include>
+      </properties>
       <build>
         <plugins>
           <plugin>
@@ -54,6 +59,9 @@
                   <source>${basedir}/src</source>
                   <vars>
                     <JVM_ARCH_DATA_MODEL>${sun.arch.data.model}</JVM_ARCH_DATA_MODEL>
+                    <CUSTOM_OPENSSL_PREFIX>${openssl.prefix}</CUSTOM_OPENSSL_PREFIX>
+                    <CUSTOM_OPENSSL_LIB>${openssl.lib}</CUSTOM_OPENSSL_LIB>
+                    <CUSTOM_OPENSSL_INCLUDE>${openssl.include}</CUSTOM_OPENSSL_INCLUDE>
                   </vars>
                 </configuration>
               </execution>
